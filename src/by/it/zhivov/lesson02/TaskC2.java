@@ -20,15 +20,19 @@ class TaskC2 {
         Scanner in = new Scanner(System.in);
         Integer dec0 = in.nextInt();
         Integer dec1 = in.nextInt();
-        String dectobin0 = Integer.toBinaryString(dec0);
-        String dectobin1 = Integer.toBinaryString(dec1);
-        String dectooct0 = Integer.toOctalString(dec0);
-        String dectooct1 = Integer.toOctalString(dec1);
-        String dectohex0 = Integer.toHexString(dec0).toUpperCase();
-        String dectohex1 = Integer.toHexString(dec1).toUpperCase();
-        System.out.println("DEC" + ":" + dec0 + "+" + dec1 + "=" + (dec0 + dec1));
-        System.out.println("BIN" + ":" + dectobin0 + "+" + dectobin1 + "=" + (dectobin0 + dectobin1));
-        System.out.println("HEX" + ":" + dectohex0 + "+" + dectohex1 + "=" + (dectohex0 + dectohex1));
-        System.out.println("OCT" + ":" + dectooct0 + "+" + dectooct1 + "=" + (dectooct0 + dectooct1));
+        Integer decsum = dec0 + dec1;
+        String bin0 = Integer.toBinaryString(dec0);
+        String bin1 = Integer.toBinaryString(dec1);
+        String oct0 = Integer.toOctalString(dec0);
+        String oct1 = Integer.toOctalString(dec1);
+        String hex0 = Integer.toHexString(dec0).toUpperCase();
+        String hex1 = Integer.toHexString(dec1).toUpperCase();
+        String binsum = Integer.toBinaryString(decsum);
+        String octsum = Integer.toOctalString(decsum);
+        String hexsum = Integer.toHexString(decsum);
+        System.out.println("DEC:" + dec0 + "+" + dec1 + "=" + decsum);
+        System.out.println("BIN:" + bin0 + "+" + bin1 + "=" + binsum);
+        System.out.println("HEX:" + hex0 + "+" + hex1 + "=" + hexsum);
+        System.out.println("OCT:" + oct0 + "+" + oct1 + "=" + octsum);
     }
 }
