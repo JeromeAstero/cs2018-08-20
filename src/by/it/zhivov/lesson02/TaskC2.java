@@ -32,7 +32,7 @@ class TaskC2 {
         String hexsum = Integer.toHexString(decsum);
         System.out.println("DEC:" + dec0 + "+" + dec1 + "=" + decsum);
         System.out.println("BIN:" + bin0 + "+" + bin1 + "=" + binsum);
-        System.out.println("HEX:" + hex0 + "+" + hex1 + "=" + hexsum);
+        System.out.println("HEX:" + hex0.toLowerCase() + "+" + hex1.toLowerCase() + "=" + hexsum.toLowerCase());
         System.out.println("OCT:" + oct0 + "+" + oct1 + "=" + octsum);
     }
 }
