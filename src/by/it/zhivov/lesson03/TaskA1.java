@@ -38,7 +38,22 @@ import java.util.Scanner;
 class TaskA1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        int a, b, sum, sub, mul, div, rem;
+        double dsum, dsub, dmul, ddiv, drem;
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+        sum = a + b;
+        sub = a - b;
+        mul = a * b;
+        div = a / b;
+        rem = a % b;
+        dsum = a + b;
+        dsub = a - b;
+        dmul = a * b;
+        ddiv =(double) a / b;
+        drem = a % b;
+        System.out.println(sum + " " + sub + " " + mul + " " + div + " " + rem);
+        System.out.println(dsum + " " + dsub + " " + dmul + " " + ddiv + " " + drem);
     }
 
 }
