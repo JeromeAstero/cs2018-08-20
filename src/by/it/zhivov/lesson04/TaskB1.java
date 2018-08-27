@@ -1,5 +1,8 @@
 package by.it.zhivov.lesson04;
 
+
+import java.util.Scanner;
+
 /*
 Определите количество дней в году
 
@@ -26,5 +29,15 @@ package by.it.zhivov.lesson04;
 
 */
 public class TaskB1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int regyear = 365;
+        int leapyear = 366;
+        int x = input.nextInt();
+        if (x % 4 == 0 & x % 100 != 0 | x % 400 == 0)
+            System.out.println("количество дней в году: " + leapyear);
+        else System.out.println("количество дней в году: " + regyear);
+
+    }
 
 }
