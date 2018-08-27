@@ -30,21 +30,30 @@ public class TaskA2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int i = in.nextInt();
-        switch (i){
+        switch (i) {
             case 1:
-                System.out.println("Понедельник"); break;
+                System.out.println("понедельник");
+                break;
             case 2:
-                System.out.println("Вторник"); break;
+                System.out.println("вторник");
+                break;
             case 3:
-                System.out.println("Среда"); break;
+                System.out.println("среда");
+                break;
             case 4:
-                System.out.println("Четверг"); break;
+                System.out.println("четверг");
+                break;
             case 5:
-                System.out.println("Пятница"); break;
+                System.out.println("пятница");
+                break;
             case 6:
-                System.out.println("Cуббота"); break;
+                System.out.println("суббота");
+                break;
             case 7:
-                System.out.println("Воскресенье"); break;
+                System.out.println("воскресенье");
+                break;
+            default:
+                System.out.println("такого дня недели не существует");
 
         }
     }
