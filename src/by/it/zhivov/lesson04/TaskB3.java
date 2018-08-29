@@ -25,7 +25,27 @@ package by.it.zhivov.lesson04;
  */
 
 
+import java.util.Scanner;
 
 public class TaskB3 {
 
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = 1;
+        int sum = 1;
+
+        while (sum <= a) {
+            System.out.print(sum + ",");
+
+            b = b + 1;
+
+            sum = b * (b + 1) / 2;
+
+        }
+
+    }
+
+
 }
+
