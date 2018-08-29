@@ -41,6 +41,7 @@ public class TaskB3 {
             b = b + 1;
 
             sum = b * (b + 1) / 2;
+            
 
         }
 
