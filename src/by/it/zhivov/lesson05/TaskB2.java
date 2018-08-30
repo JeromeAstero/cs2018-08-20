@@ -20,6 +20,20 @@ b=[11, 22, 33, 44, 55, 66, 77, 88, 99, 0]
 
 */
 
-public class TaskB2 {
+import java.util.*;
 
+public class TaskB2 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int[] m = new int[20];
+        int[] a = new int[10];
+        int[] b = new int[10];
+        for (int i = 0; m.length > i; i++) {
+            m[i] = in.nextInt();
+        }
+        System.arraycopy(m, 0, a, 0, a.length);
+        System.arraycopy(m, a.length, b, 0, b.length);
+        System.out.println("a=" + Arrays.toString(a));
+        System.out.println("b=" + Arrays.toString(b));
+    }
 }

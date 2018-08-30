@@ -24,6 +24,15 @@ package by.it.zhivov.lesson05;
 */
 
 
-public class TaskA1 {
+import java.util.Scanner;
 
+public class TaskA1 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int[] mass = new int[10];
+        for (int i = 9; i >= 0; i--) {
+            mass[i] = in.nextInt();
+        }
+        for (int u : mass) System.out.println(u);
+    }
 }
