@@ -1,5 +1,7 @@
 package by.it.zhivov.lesson04;
 
+import java.util.Scanner;
+
 /*
 Напишите программу которая спрашивает у пользователя:
 Какую вы хотите зарплату в $$$?
@@ -37,6 +39,58 @@ package by.it.zhivov.lesson04;
 
 */
 public class TaskC1 {
-
-
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Какую Вы хотите зарплату, в $$$? ");
+        int zp = sc.nextInt();
+        stop1:
+        if (zp < 300 || zp > 3000)
+            System.out.println("Мы вам перезвоним!");
+        else for (int i = 0; i < 15; i++) {
+            if (i == 0 || i == 13 || i == 14)
+                System.out.println("За месяц " + i + " начислено $" + 0.0);
+            else switch (i) {
+                case 1:
+                    System.out.println("За январь начислено $" + zp * 1.5);
+                    break;
+                case 2:
+                    if (zp == 444) break stop1;
+                    else System.out.println("За февраль начислено $" + zp * 1.5);
+                    break;
+                case 3:
+                    System.out.println("За март начислено $" + zp * 1.5);
+                    break;
+                case 4:
+                    System.out.println("За апрель начислено $" + zp * 1.5);
+                    break;
+                case 5:
+                    System.out.println("За май начислено $" + zp * 1.5);
+                    break;
+                case 6:
+                    System.out.println("За июнь начислено $" + zp * 1.0);
+                    break;
+                case 7:
+                    if (zp == 666) break stop1;
+                    else System.out.println("За июль начислено $" + zp * 1.0);
+                    break;
+                case 8:
+                    System.out.println("За август начислено $" + zp * 1.0);
+                    break;
+                case 9:
+                    System.out.println("За сентябрь начислено $" + zp * 1.5);
+                    break;
+                case 10:
+                    System.out.println("За октябрь начислено $" + zp * 1.5);
+                    break;
+                case 11:
+                    System.out.println("За ноябрь начислено $" + zp * 1.5);
+                    break;
+                case 12:
+                    System.out.println("За декабрь начислено $" + zp * 1.5);
+                    break;
+                default:
+                    System.out.println();
+            }
+        }
+    }
 }
