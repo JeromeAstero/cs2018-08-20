@@ -1,4 +1,4 @@
-package by.it._tasks_.lesson06;
+package by.it.zhivov.lesson06;
 
 /*
 Доработайте класс Dog.
@@ -30,6 +30,26 @@ boolean win(Dog otherDog)
 */
 
 
-public class TaskC1 {
+import java.util.Scanner;
 
+public class TaskC1 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Dog dog1 = new Dog(
+                in.next(),
+                in.nextInt(),
+                in.nextInt(),
+                in.nextDouble()
+        );
+        Dog dog2 = new Dog(
+                in.next(),
+                in.nextInt(),
+                in.nextInt(),
+                in.nextDouble()
+        );
+        if (dog1.win(dog2))
+            System.out.println(dog1.getName());
+        else
+            System.out.println(dog2.getName());
+    }
 }
