@@ -34,6 +34,11 @@ x12 = (-b - √D)/2a
 
 */
 class TaskB2 {
+    public static int dis(int a, int b, int c) {
+        int dis = (b * b) - (4 * (a * c));
+        return dis;
+    }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int a, b, c;
@@ -41,31 +46,13 @@ class TaskB2 {
         a = in.nextInt();
         b = in.nextInt();
         c = in.nextInt();
-        d = (double) discriminant(a, b, c);
+        d = (double) dis(a, b, c);
         sqr = (double) Math.sqrt(d);
         x1 = (double) (-b + sqr) / (a * a);
         x2 = (double) (-b - sqr) / (a * a);
         x3 = (double) (-b) / (a * a);
-        if (isPositive(d) == true) System.out.println(x1 + " " + x2);
-        if (isZero(d) == true) System.out.println(x3);
-        if (isPositive(d) == false & d != 0) System.out.println("Отрицательный дискриминант");
-
-    }
-
-    private static int discriminant(int a, int b, int c) {
-        int dis = (b * b) - (4 * (a * c));
-        return dis;
-    }
-
-    private static boolean isPositive(double a) {
-        if (a > 0) {
-            return true;
-        } else return false;
-    }
-
-    private static boolean isZero(double a) {
-        if (a == 0) {
-            return true;
-        } else return false;
+        if (d > 0) System.out.println(x1 + " " + x2);
+        if (d == 0) System.out.println(x3);
+        if (d < 0) System.out.println("Отрицательный дискриминант");
     }
 }
